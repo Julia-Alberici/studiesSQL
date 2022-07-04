@@ -22,3 +22,5 @@ UPDATE pessoa SET genero='F' WHERE id=1;
 UPDATE pessoa SET genero='F' WHERE id=2;
 UPDATE pessoa SET genero='F' WHERE id=3;
 UPDATE pessoa SET genero='F' WHERE id=5;
+
+SELECT COUNT(id), genero FROM pessoa GROUP BY genero;
