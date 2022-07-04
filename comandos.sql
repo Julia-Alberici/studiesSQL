@@ -11,3 +11,5 @@ INSERT INTO pessoa (nome, nascimento) VALUES ('Luan', '1992-10-01');
 INSERT INTO pessoa (nome, nascimento) VALUES ('Aurora', '2019-05-10');
 
 UPDATE pessoas SET nome= 'Fernanda' WHERE id=3; 
+
+DELETE FROM pessoa WHERE id=4;
