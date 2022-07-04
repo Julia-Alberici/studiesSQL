@@ -17,3 +17,8 @@ DELETE FROM pessoas WHERE id=4;
 SELECT * FROM pessoas ORDER BY nome;
 
 ALTER TABLE pessoas ADD genero VARCHAR(1) NOT NULL AFTER nascimento;
+
+UPDATE pessoa SET genero='F' WHERE id=1;
+UPDATE pessoa SET genero='F' WHERE id=2;
+UPDATE pessoa SET genero='F' WHERE id=3;
+UPDATE pessoa SET genero='F' WHERE id=5;
