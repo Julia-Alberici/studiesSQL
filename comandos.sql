@@ -12,6 +12,8 @@ INSERT INTO pessoa (nome, nascimento) VALUES ('Aurora', '2019-05-10');
 
 UPDATE pessoas SET nome= 'Fernanda' WHERE id=3; 
 
-DELETE FROM pessoa WHERE id=4;
+DELETE FROM pessoas WHERE id=4;
 
-SELECT * FROM pessoa ORDER BY nome;
+SELECT * FROM pessoas ORDER BY nome;
+
+ALTER TABLE pessoas ADD genero VARCHAR(1) NOT NULL AFTER nascimento;
