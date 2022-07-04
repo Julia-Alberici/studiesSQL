@@ -6,3 +6,9 @@ CREATE TABLE canais (
 INSERT INTO canais (nome_canal) VALUES ('React');
 INSERT INTO canais (nome_canal) VALUES ('PHP');
 INSERT INTO canais (nome_canal) VALUES ('CSS');
+
+CREATE TABLE videos (
+	id_video INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome_video VARCHAR(100) NOT NULL,
+    autor_video VARCHAR(30) NOT NULL
+)
