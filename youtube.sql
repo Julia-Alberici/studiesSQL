@@ -37,3 +37,4 @@ UPDATE videos SET author=3 WHERE id_video=5;
 turn into a foreign key to id_author from table author by phpMyAdmin */
 
 SELECT * FROM videos JOIN author ON videos.fk_author = author.id_author;
+SELECT videos.title, author.name FROM videos JOIN author ON videos.fk_author = author.id_author;
