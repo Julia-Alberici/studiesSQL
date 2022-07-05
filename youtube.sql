@@ -52,3 +52,12 @@ UPDATE videos SET fk_seo=2 WHERE id_video=6;
 SELECT videos.title, author.name, seo.category FROM videos 
 JOIN author ON videos.fk_author = author.id_author 
 JOIN seo ON videos.fk_seo = seo.id_seo;
+
+CREATE TABLE playlist (
+    id_playlist INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name_playlist VARCHAR(30)
+);
+
+INSERT INTO playlist (name_playlist) VALUES ('HTML + CSS');
+INSERT INTO playlist (name_playlist) VALUES ('HTML + PHP + JS');
+INSERT INTO playlist (name_playlist) VALUES ('Python + PHP');
