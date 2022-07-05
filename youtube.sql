@@ -38,3 +38,17 @@ turn into a foreign key to id_author from table author by phpMyAdmin */
 
 SELECT * FROM videos JOIN author ON videos.fk_author = author.id_author;
 SELECT videos.title, author.name FROM videos JOIN author ON videos.fk_author = author.id_author;
+
+INSERT INTO videos (fk_author, title, likes, dislikes) VALUES (2, 'PHP', 20, 8);
+
+ALTER TABLE videos ADD fk_seo INT AFTER title;
+ALTER TABLE videos ADD CONSTRAINT fk_seo FOREIGN KEY (fk_seo) REFERENCES seo (id_seo);
+
+UPDATE videos SET fk_seo=1;
+UPDATE videos SET fk_seo=2 WHERE id_video=1;
+UPDATE videos SET fk_seo=2 WHERE id_video=5;
+UPDATE videos SET fk_seo=2 WHERE id_video=6;
+
+SELECT videos.title, author.name, seo.category FROM videos 
+JOIN author ON videos.fk_author = author.id_author 
+JOIN seo ON videos.fk_seo = seo.id_seo;
