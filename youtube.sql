@@ -11,3 +11,9 @@ INSERT INTO videos (author, title, likes, dislikes) VALUES ('João', 'HTML', 30,
 INSERT INTO videos (author, title, likes, dislikes) VALUES ('Maria', 'CSS', 18, 3);
 INSERT INTO videos (author, title, likes, dislikes) VALUES ('Pedro', 'JavaScript', 15, 8);
 INSERT INTO videos (author, title, likes, dislikes) VALUES ('Maria', 'Python', 50, 0);
+
+CREATE TABLE author (
+    id_author INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(30),
+    born INT
+    );
