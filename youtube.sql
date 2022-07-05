@@ -19,3 +19,8 @@ CREATE TABLE author (
     );
 
 ALTER TABLE author ADD phone INT;
+
+INSERT INTO author (name, born, phone) VALUES ('Maria', '1992-04-10', 30225660);
+INSERT INTO author (name, born, phone) VALUES ('Pedro', '2000-10-14', 30874414);
+INSERT INTO author (name, born, phone) VALUES ('João', '1995-05-20', 35163874);
+INSERT INTO author (name, born, phone) VALUES ('Flávia', '1985-08-01', 30145366);
