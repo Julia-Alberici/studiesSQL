@@ -61,3 +61,24 @@ CREATE TABLE playlist (
 INSERT INTO playlist (name_playlist) VALUES ('HTML + CSS');
 INSERT INTO playlist (name_playlist) VALUES ('HTML + PHP + JS');
 INSERT INTO playlist (name_playlist) VALUES ('Python + PHP');
+
+CREATE TABLE videos_playlist (
+id_vd INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+fk_videos INT,
+fk_playlist INT,
+FOREIGN KEY(fk_videos) REFERENCES videos(id_video),
+FOREIGN KEY(fk_playlist) REFERENCES playlist(id_playlist)
+);
+
+INSERT INTO videos_playlist (fk_videos, fk_playlist) VALUES (2, 1);
+INSERT INTO videos_playlist (fk_videos, fk_playlist) VALUES (3,1);
+INSERT INTO videos_playlist (fk_videos, fk_playlist) VALUES (2, 2);
+INSERT INTO videos_playlist (fk_videos, fk_playlist) VALUES (6,2);
+INSERT INTO videos_playlist (fk_videos, fk_playlist) VALUES (4, 2);
+INSERT INTO videos_playlist (fk_videos, fk_playlist) VALUES (5,3);
+INSERT INTO videos_playlist (fk_videos, fk_playlist) VALUES (6,3);
+
+SELECT playlist.name_playlist, videos.title, author.name FROM playlist JOIN videos_playlist ON playlist.id_playlist =
+    videos_playlist.fk_playlist
+    JOIN videos ON videos.id_video= videos_playlist.fk_videos
+    JOIN author ON videos.fk_author = author.id_author;
