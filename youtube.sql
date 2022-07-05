@@ -15,5 +15,5 @@ INSERT INTO videos (author, title, likes, dislikes) VALUES ('Maria', 'Python', 5
 CREATE TABLE author (
     id_author INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(30),
-    born INT
+    born DATE
     );
