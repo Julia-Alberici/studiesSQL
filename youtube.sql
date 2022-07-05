@@ -17,3 +17,5 @@ CREATE TABLE author (
     name VARCHAR(30),
     born DATE
     );
+
+ALTER TABLE author ADD phone INT;
