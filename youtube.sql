@@ -82,3 +82,11 @@ SELECT playlist.name_playlist, videos.title, author.name FROM playlist JOIN vide
     videos_playlist.fk_playlist
     JOIN videos ON videos.id_video= videos_playlist.fk_videos
     JOIN author ON videos.fk_author = author.id_author;
+
+ALTER TABLE playlist ADD fk_author_playlist INT;
+ALTER TABLE playlist ADD CONSTRAINT fk_author_playlist FOREIGN KEY (fk_author_playlist) REFERENCES author (id_author);
+
+UPDATE playlist SET fk_author_playlist=4;
+UPDATE playlist SET fk_author_playlist=3 WHERE id_playlist=3;
+
+SELECT playlist.name_playlist, author.name FROM playlist JOIN author ON playlist.fk_author_playlist=author.id_author;
