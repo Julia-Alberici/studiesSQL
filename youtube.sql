@@ -90,3 +90,5 @@ UPDATE playlist SET fk_author_playlist=4;
 UPDATE playlist SET fk_author_playlist=3 WHERE id_playlist=3;
 
 SELECT playlist.name_playlist, author.name FROM playlist JOIN author ON playlist.fk_author_playlist=author.id_author;
+
+SELECT playlist.name_playlist, author.name FROM playlist AS p JOIN author AS a ON p.fk_author_playlist=a.id_author;
